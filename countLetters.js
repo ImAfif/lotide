@@ -5,4 +5,8 @@ const assertEqual = function (actual, expected) {
     return `🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`;
   }
 };
-console.log(assertEqual("1", "1"));
+console.log(assertEqual("1", "2"));
+
+const countLetters = function (sentence) {
+  const countOnly = function () {};
+};
