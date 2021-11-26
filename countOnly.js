@@ -5,13 +5,11 @@ const assertEqual = function (actual, expected) {
     return `🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`;
   }
 };
-console.log(assertEqual("1", "1"));
-
 const countOnly = function (allItems, itemsToCount) {
   const results = {};
   for (const item of allItems) {
-    console.log(item);
-    console.log(itemsToCount[item], "test");
+    // console.log(item);
+    // console.log(itemsToCount[item], "test");
     //if names exist in all items, we want to give it a one
     if (!results[item] && itemsToCount[item] == true) {
       results[item] = 1;
@@ -22,10 +20,9 @@ const countOnly = function (allItems, itemsToCount) {
     //if name has false, dont add one leave as undefined
     //firstName= results[item]
   }
-  console.log(results);
+  // console.log(results);
   return results;
 };
-
 const firstNames = [
   "Karl",
   "Karl",
@@ -42,11 +39,6 @@ const firstNames = [
   "Salima",
   "Fang",
   "Joe",
-  "Karima",
-  "Karima",
-  "Karima",
-  "Karima",
-  "Karima",
 ];
 const result1 = countOnly(firstNames, {
   Jason: true,
@@ -54,12 +46,10 @@ const result1 = countOnly(firstNames, {
   Fang: true,
   Agouhanna: false,
 });
-
-// assertEqual(result1["Jason"], 1);
-// assertEqual(result1["Karima"], undefined);
-// assertEqual(result1["Fang"], 2);
-// assertEqual(result1["Agouhanna"], undefined);
-
+console.log(assertEqual(result1["Jason"], 1));
+console.log(assertEqual(result1["Karima"], undefined));
+console.log(assertEqual(result1["Fang"], 2));
+console.log(assertEqual(result1["Agouhanna"], undefined));
 // In JavaScript, a primitive (primitive value, primitive data type) is
 // data that is not an object and has no methods. There are 7 primitive data
 // types: string, number, bigint, boolean, undefined, symbol, and null.
