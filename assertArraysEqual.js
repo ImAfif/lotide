@@ -13,4 +13,6 @@ function eqArrays(Array1, Array2) {
   }
 }
 
-console.log(eqArrays([10, 10], [10, 10]));
+// console.log(eqArrays([10, 10], [1, 10]));
+
+module.exports = eqArrays;

@@ -8,6 +8,9 @@ const assertEqual = function (actual, expected) {
 
 function eqArrays(Array1, Array2) {
   //if the arrays are not equal in length
+  // if (Array1.length === 0 || Array2.length !== 0) {
+  //   return false;
+
   if (Array1.length !== Array2.length) {
     return false;
   }
@@ -17,17 +20,22 @@ function eqArrays(Array1, Array2) {
     if (Array1[i] !== Array2[i]) {
       return false;
     }
+    return true;
   }
   return true;
 }
 
 // step 1
-console.log(assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true));
-// step 2
-// console.log(assertEqual(true, true)) //true
+// console.log(assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true));
+// // step 2
+// // console.log(assertEqual(true, true)) //true
 
-console.log(assertEqual(eqArrays([1, 3, 3], [1, 2, 3]), false));
+// console.log(assertEqual(eqArrays([1, 3, 3], [1, 2, 3]), false));
 
-console.log(assertEqual(eqArrays([1, 3, 4], [1, 2, 3]), true));
+// console.log(assertEqual(eqArrays([1, 3, 4], [1, 2, 3]), true));
 
-//console.log(assertEqual("1", "2")) // argiument = "1", argument 2 = "2"
+// //console.log(assertEqual("1", "2")) // argiument = "1", argument 2 = "2"
+
+// console.log(assertEqual(eqArrays([1], []), true));
+
+module.exports = eqArrays;
